@@ -1,0 +1,62 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Barba JS Test Project</title>
+
+  <!-- Pretty Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+  <!-- CSS Defaults -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/default.css">
+
+  <!-- Main CSS file -->
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+  <body data-barba="wrapper">
+    <div class="loading-container">
+      <div class="loading-screen">
+      </div>
+    </div>
+    
+    <header>
+      <nav class="main-navigation">
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="about.html">about</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Only this section changes on link navigation -->
+    <main data-barba="container" data-barba-namespace="about">
+      <div class="heading-container">
+        <h1 class="main-heading is-animated">This is<br><span class="green-heading-bg">the about</span><br>screen.<br></h1>
+        <img src="img/hand-square-trans.png" class="main-img is-animated">
+      </div>
+    </main>
+
+  </body>
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <!-- Barba Core -->
+  <script src="https://unpkg.com/@barba/core"></script>
+
+  <!-- GSAP for animation -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+
+  <!-- Some basic helper functions -->
+  <script src="js/helper.js"></script>
+
+  <!-- Main JS file -->
+  <script src="js/main.js"></script>
+
+
+</html>

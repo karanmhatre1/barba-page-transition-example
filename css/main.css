@@ -1,0 +1,117 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Navigation Styling */
+
+header nav {
+  position: fixed;
+  z-index: 9;
+  text-align: right;
+  width: 100%;
+  padding: 30px 100px;
+  top: 0px;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding-left: 20px;
+  margin-left: 20px;
+}
+
+/* Navigation Styling Ends */
+
+/* ================= */
+
+/* Loading Screen Styling */
+
+.loading-screen {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  background-color: #4BEDC2;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(0) skewX(0);
+  transform-origin: top left;
+}
+
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Loading Screen Styling Ends */
+
+/* ================= */
+
+/* Heading Container Styling */
+
+.heading-container {
+  height: 80vh;
+}
+
+.heading-container img.main-img {
+  position: absolute;
+  right: 30px;
+  top: 80px;
+  width: 40%;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.heading-container h1 {
+  font-size: 160px;
+  padding: 50px;
+  top: 50px;
+  margin-top: 20px;
+  margin-left: 50px;
+  line-height: 140px;
+  transform: translateY(0);
+  opacity: 1;
+  position: absolute;
+  z-index: 9;
+}
+
+/* Cool green stripe Styling */
+
+.heading-container h1 span.green-heading-bg {
+  display: inline;
+  z-index: -1;
+  background-image: linear-gradient(#4BEDC2, #4BEDC2);
+  background-position: 0 80%;
+  background-repeat: no-repeat;
+  background-size: 0 40%;
+  margin-left: -0.55rem;
+  margin-right: -0.55rem;
+  padding-left: 0.55rem;
+  padding-right: 0.55rem;
+  transition: background-size 1s 1.5s ease;
+}
+
+.heading-container h1 span.green-heading-bg.show {
+  background-size: 100% 40%;
+}
+
+.heading-container h1 i {
+  font-size: 100px;
+}
+
+/* Heading Styling Ends */
+
+/* ================= */
+
