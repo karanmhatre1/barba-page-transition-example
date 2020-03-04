@@ -1,3 +1,10 @@
+/* =================
+
+author: Karan Mhatre
+email: me@karanmhatre.com
+website: karanmhatre.com
+  
+================= */
 
 // Function to add and remove the page transition screen
 function pageTransition() {
