@@ -51,8 +51,8 @@ transitions: [{
 ```
 These are barba js hooks.
 
-"Once" is called the first time the page is loaded. This time we want to simply animate all the content in place.\
+"Once" is called the first time the page is loaded. This time we want to simply animate all the content in place.
 
-"Leave" is called when you move out of one page to another. While moving out of the page, we want to call ```loadingAnimation```, wait 1s, and then pass control to the next hook .i.e. "Enter".\
+"Leave" is called when you move out of one page to another. While moving out of the page, we want to call ```loadingAnimation```, wait 1s, and then pass control to the next hook .i.e. "Enter".
 
-"Enter" is called when you enter a new page. As soon as we enter the page, we want to call ```contentAnimate``` to show all the elements on this page.\
+"Enter" is called when you enter a new page. As soon as we enter the page, we want to call ```contentAnimate``` to show all the elements on this page.
