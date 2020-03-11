@@ -20,17 +20,10 @@ The sequence of the animation is
 - Change the page content.
 - Remove ".loading-screen".
 
-```javascript
-function loadingAnimation()
-```
-This function shows and hides the ".loading-screen", which is a fullpage screen used to transition between pages.
+``` function loadingAnimation() ``` - This function shows and hides the ".loading-screen", which is a fullpage screen used to transition between pages.
 
 
-```javascript
-function contentAnimation()
-```
-All the content on the page starts with ```opacity: 0```.
-This function animates on all on screen elements into visibility.
+``` function contentAnimation() ``` - All the content on the page starts with ```opacity: 0```. This function animates on all on screen elements into visibility.
 
 
 ```javascript
