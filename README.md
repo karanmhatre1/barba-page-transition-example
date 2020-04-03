@@ -1,8 +1,8 @@
 # Page transition example using Barba JS
 
-> "Create badass fluid and smooth transitions between your website’s pages." - [Barba JS](barba.js.org)
+> "Create badass fluid and smooth transitions between your website’s pages." - [Barba JS](https://barba.js.org)
 
-You can find helpful documentation on their [website](barba.js.org).
+You can find helpful documentation on their [website](https://barba.js.org/docs/getstarted/intro/).
 
 This demo shows how to use Barba JS for page navigation.
 [See the demo](http://karanmhatre.com/barba-page-transition-example/index.html)
