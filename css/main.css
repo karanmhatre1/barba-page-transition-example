@@ -26,12 +26,18 @@ header nav {
 header nav ul {
   list-style: none;
   padding: 0;
+  text-align: center;
 }
 
 header nav ul li {
   display: inline-block;
   padding-left: 20px;
   margin-left: 20px;
+}
+
+header nav ul li:first-child{
+  margin-left: 0;
+  padding-left: 0
 }
 
 /* Navigation Styling Ends */
@@ -70,28 +76,55 @@ header nav ul li {
 /* Heading Container Styling */
 
 .heading-container {
-  height: 80vh;
+  max-width: 800px;
+  margin:auto;
+  position: relative;
+  padding-top: 40px;
+}
+
+footer {
+  max-width: 800px;
+  margin:auto;
+  border-top: 1px dashed #28ca9f;
+  margin-top: 40px;
+}
+
+footer ul {
+  list-style:  none;
+  text-align: center;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+footer ul li a {
+  color: #28ca9f;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
 }
 
 .heading-container img.main-img {
   position: absolute;
-  right: 30px;
+  right: -140px;
   top: 80px;
-  width: 40%;
+  width: 60%;
   opacity: 1;
   transform: translateY(0);
 }
 
 .heading-container h1 {
-  font-size: 160px;
+  font-size: 100px;
+  line-height: 100px;
   padding: 50px;
   top: 50px;
   margin-top: 20px;
-  margin-left: 50px;
-  line-height: 140px;
   transform: translateY(0);
   opacity: 1;
-  position: absolute;
+  position: relative;
   z-index: 9;
 }
 
@@ -123,3 +156,21 @@ header nav ul li {
 
 /* ================= */
 
+
+@media only screen and (max-width: 600px) {
+  .heading-container h1 {
+    font-size: 52px;
+    line-height: 52px;
+    margin-left: 0;
+  }
+
+  .heading-container {
+    overflow: hidden;
+  }
+
+  .heading-container img.main-img {
+    right: -110px;
+    top: 80px;
+    width: 70%;
+  }
+}
