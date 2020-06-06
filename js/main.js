@@ -7,6 +7,7 @@ website: karanmhatre.com
 ================= */
 
 // Better to traverse the DOM thenleast possible
+// you can use `var` instead of `const` for legacy browser support
 const loadingScreen = document.querySelector('.loading-screen')
 const mainNavigation = document.querySelector('.main-navigation')
 
