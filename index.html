@@ -20,12 +20,12 @@
 
 </head>
 
-  <body data-barba="wrapper">
+  <body>
     <div class="loading-container">
       <div class="loading-screen">
       </div>
     </div>
-    
+
     <header>
       <nav class="main-navigation">
         <ul>
@@ -35,13 +35,16 @@
       </nav>
     </header>
 
-    <!-- Only this section changes on link navigation -->
-    <main data-barba="container" data-barba-namespace="home">
-      <div class="heading-container">
-        <h1 class="main-heading is-animated">This is<br><span class="green-heading-bg">the home</span><br>screen.<br></h1>
-        <img src="img/hand-square-trans.png" class="main-img is-animated">
-      </div>
-    </main>
+    <!-- Better to wrap barba container as close as possible -->
+    <div data-barba="wrapper">
+      <!-- Only this section changes on link navigation -->
+      <main data-barba="container" data-barba-namespace="home">
+        <div class="heading-container">
+          <h1 class="main-heading is-animated">This is<br><span class="green-heading-bg">the home</span><br>screen.<br></h1>
+          <img src="img/hand-square-trans.png" class="main-img is-animated">
+        </div>
+      </main>
+    </div>
 
     <footer>
       <ul>
@@ -49,7 +52,7 @@
         <li>•</li>
         <li><a href="https://github.com/karanmhatre1/barba-page-transition-example" target="_blank">Find on Github</a></li>
       </ul>
-      
+
     </footer>
 
   </body>

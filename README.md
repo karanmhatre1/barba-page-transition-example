@@ -11,17 +11,19 @@ This demo shows how to use Barba JS for page navigation.
 
 I am using [GSAP](https://greensock.com/gsap/) for basic animations on the page.
 
-The sequence of the animation is
+The sequence of the animation is:
+
 - Block the full screen with ".loading-screen".
 - Remove ".loading-screen".
 - Animate the new page content.
 
 ---
 
-### Understanding Supporting Functions
+## Understanding Supporting Functions
+
+> This code use `async/await` modern JavaScript pattern but, as mentionned in the documentation, you can use promises or `this.async`.
 
 ``` function loadingAnimation() ``` - This function shows and hides the ".loading-screen", which is a fullpage screen used to transition between pages.
-
 
 ``` function contentAnimation() ``` - All the content on the page starts with ```opacity: 0```. This function animates on all on screen elements into visibility.
 
@@ -50,6 +52,7 @@ transitions: [{
   }
 
 }]
+
 ```
 These are barba js hooks.
 
