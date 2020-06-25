@@ -11,19 +11,23 @@ This demo shows how to use Barba JS for page navigation.
 
 I am using [GSAP](https://greensock.com/gsap/) for basic animations on the page.
 
-The sequence of the animation is
-- Block the full screen with ".loading-screen".
-- Remove ".loading-screen".
+The sequence of the animation is:
+
+- Block the full screen with `.loading-screen`.
+- Remove `.loading-screen`.
 - Animate the new page content.
 
 ---
 
-### Understanding Supporting Functions
+## Understanding Supporting Functions
 
-``` function loadingAnimation() ``` - This function shows and hides the ".loading-screen", which is a fullpage screen used to transition between pages.
+> This code use `async/await` modern JavaScript pattern but, as mentionned in the documentation, you can use promises or `this.async`.
 
+`function pageTransitionIn()` - This function shows the ".loading-screen", which is a fullpage screen used to transition between pages.
 
-``` function contentAnimation() ``` - All the content on the page starts with ```opacity: 0```. This function animates on all on screen elements into visibility.
+`function pageTransitionOut()` - This function hides the ".loading-screen" and call the content animation.
+
+`function contentAnimation()` - All the content on the page starts with `opacity: 0`. This function animates on all on screen elements into visibility.
 
 ---
 
@@ -31,30 +35,27 @@ The sequence of the animation is
 
 ```javascript
 transitions: [{
-
-  async leave(data) {
-
-    const done = this.async();
-
-    loadingAnimation();
-    await delay(1000);
-    done();
+  leave(data) {
+    // Page transition in
+    // Remove current content
   },
 
   enter(data) {
-    contentAnimation();
+    // Page transition out
+    // content animation
   },
 
   once(data) {
-    contentAnimation();
+    // Content animation
   }
-
 }]
+
 ```
+
 These are barba js hooks.
 
-"Once" is called the first time the page is loaded. This time we want to simply animate all the content in place.
+`once` is called the first time the page is loaded. This time we want to simply animate all the content in place.
 
-"Leave" is called when you move out of one page to another. While moving out of the page, we want to call ```loadingAnimation```, wait 1s, and then pass control to the next hook .i.e. "Enter".
+`leave` is called when you move out of one page to another. While moving out of the page, we want to hide everything with the loading screen, remove old content then play "enter".
 
-"Enter" is called when you enter a new page. As soon as we enter the page, we want to call ```contentAnimate``` to show all the elements on this page.
+`enter` is called when you enter a new page. As soon as we enter the page, show new content with animation.
